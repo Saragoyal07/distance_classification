@@ -1,0 +1,19 @@
+# distanceclassification.py
+import pandas as pd
+
+def load_dataset(path):
+    """Load the dataset from the given path."""
+    try:
+        dataset = pd.read_csv(path)
+        print(f"Dataset loaded successfully with shape: {dataset.shape}")
+        return dataset
+    except Exception as e:
+        print(f"Error loading dataset: {e}")
+        return None
+
+if __name__ == "__main__":
+    # Replace with your actual dataset path
+    dataset_path = "path/to/your/dataset.csv"
+    dataset = load_dataset(dataset_path)
+
+    
